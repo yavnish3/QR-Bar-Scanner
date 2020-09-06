@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@drawable/gradient_title_bar_primary_color_and_accent_color"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStartWithNavigation="@dimen/margin_0"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="horizontal"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layout_generate"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="@dimen/height_70"
+            android:gravity="center"
+            android:backgroundTint="@color/white">
+
+            <ImageView
+                android:id="@+id/generate_active"
+                android:src="@drawable/ic_generate_active"
+                android:layout_width="@dimen/height_56"
+                android:visibility="gone"
+                android:layout_height="@dimen/height_56"/>
+
+            <ImageView
+                android:id="@+id/image_generate"
+                android:layout_above="@+id/text_generate"
+                android:layout_marginLeft="@dimen/height_15"
+                android:layout_marginBottom="@dimen/height_5"
+                android:src="@drawable/ic_generate_inactive"
+                android:layout_width="@dimen/width_24"
+                android:layout_height="@dimen/height_24"/>
+            <TextView
+                android:id="@+id/text_generate"
+                android:text="Generate"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_smaller_body"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_scan"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="@dimen/height_70"
+            android:backgroundTint="@color/white">
+
+            <ImageView
+                android:id="@+id/scan_active"
+                android:src="@drawable/ic_scan_active"
+                android:layout_width="@dimen/height_56"
+                android:layout_height="@dimen/height_56"/>
+
+
+            <ImageView
+                android:id="@+id/image_scan"
+                android:layout_above="@+id/text_scan"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/height_15"
+                android:src="@drawable/ic_scan_inactive"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_width="@dimen/width_24"
+                android:layout_height="@dimen/height_24"/>
+            <TextView
+                android:id="@+id/text_scan"
+                android:text="Scan"
+                android:layout_marginBottom="@dimen/height_5"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="13dp"
+                android:textSize="@dimen/text_smaller_body"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framlayout"
+        android:layout_above="@+id/ll"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</RelativeLayout>

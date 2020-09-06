@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".GenerateFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/height_20"
+            android:textSize="28dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:text="Generate Qr &amp; Bar Code"/>
+
+        <EditText
+            android:id="@+id/edit_text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/text_view_background_gray_color"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="top|start"
+            android:hint="Enter your text"
+            android:minHeight="@dimen/height_150"
+            android:padding="@dimen/padding_16"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="@dimen/text_body" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/coordinator_layout_spinner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:paddingTop="@dimen/padding_8"
+            android:paddingBottom="@dimen/padding_8"
+            android:background="@drawable/text_view_background_gray_color">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_types"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/code_types"
+                android:padding="@dimen/padding_8"
+                android:spinnerMode="dropdown" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/img_code"
+            android:layout_marginTop="@dimen/height_20"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="250dp"
+            android:layout_height="250dp"/>
+
+        <TextView
+            android:id="@+id/txt_save"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:text="Dowanload Code"
+            app:drawableTopCompat="@drawable/ic_download_white" />
+
+        <TextView
+            android:id="@+id/text_view_generate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_64"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/margin_64"
+            android:layout_marginBottom="@dimen/margin_32"
+            android:background="@drawable/gradient_button_primary_color_and_accent_color"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center"
+            android:padding="@dimen/padding_16"
+            android:text="Generate"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
